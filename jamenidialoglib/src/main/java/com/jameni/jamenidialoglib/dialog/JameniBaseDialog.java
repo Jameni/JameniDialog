@@ -3,6 +3,7 @@ package com.jameni.jamenidialoglib.dialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 
 import com.jameni.jamenidialoglib.R;
@@ -15,6 +16,8 @@ public class JameniBaseDialog extends Dialog {
     protected NormalDialogListener listener;
     protected SingleDialogListener singleListener;
     protected int Tag;
+    protected Object obj;//用来存数据
+
 
     public JameniBaseDialog(Context context) {
         super(context, R.style.JameniDialogStyle);
@@ -28,8 +31,12 @@ public class JameniBaseDialog extends Dialog {
         getWindow().setBackgroundDrawableResource(android.R.color.transparent);
     }
 
-    public void setTag ( int tag){
+    public void setTag(int tag) {
         Tag = tag;
+    }
+
+    public void setObj(Object obj) {
+        this.obj = obj;
     }
 
     public void setNormalListener(NormalDialogListener listener) {
@@ -39,4 +46,13 @@ public class JameniBaseDialog extends Dialog {
     public void setSingleListener(SingleDialogListener singleListener) {
         this.singleListener = singleListener;
     }
+
+    protected static boolean isEmpty(String str) {
+        return str == null || str.length() == 0;
+    }
+
+    protected static boolean isNull(Object obj) {
+        return obj == null;
+    }
+
 }

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--默认 黑色字体-->
+    <color name="jameni_dialog_txt_main">#161d1c</color>
+    <!--默认 灰色字体-->
+    <color name="jameni_dialog_txt_gray">#c5c5c5</color>
+    <!--默认 否定按钮颜色-->
+    <color name="jameni_dialog_txt_no">@color/jameni_dialog_txt_gray</color>
+    <!--默认 确定按钮颜色-->
+    <color name="jameni_dialog_txt_ok">@color/jameni_dialog_txt_main</color>
+    <color name="jameni_dialog_txt_ok_single">@color/jameni_dialog_txt_main</color>
+
+    <!--标题-->
+    <color name="jameni_dialog_title">@color/jameni_dialog_txt_main</color>
+    <!--分割线-->
+    <color name="jameni_dialog_line_gray">#E4E4E4</color>
+
+
+</resources>
