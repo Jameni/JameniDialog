@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.jameni.jamenidialoglib.dialog.LoadingDialog;
 import com.jameni.jamenidialoglib.dialog.NormalDialog;
 import com.jameni.jamenidialoglib.dialog.SelectImageDialog;
 import com.jameni.jamenidialoglib.dialog.SelectSexDialog;
@@ -46,13 +47,23 @@ public class MainActivity extends AppCompatActivity implements SelectSexListener
 
     public void btn3(View view) {
 
-        SelectImageDialog dialog = new SelectImageDialog(this,this,false);
+        SelectImageDialog dialog = new SelectImageDialog(this, this, false);
         dialog.show();
 
     }
+
     public void btn4(View view) {
 
-        SelectSexDialog dialog = new SelectSexDialog(this,this,true);
+        SelectSexDialog dialog = new SelectSexDialog(this, this, true);
+        dialog.show();
+
+    }
+
+
+    public void btn5(View view) {
+
+        LoadingDialog dialog = new LoadingDialog(this);
+        dialog.setCanceledOnTouchOutside(true);
         dialog.show();
 
     }
@@ -88,6 +99,6 @@ public class MainActivity extends AppCompatActivity implements SelectSexListener
 
     @Override
     public void selectSex(int sexType, String sexText) {
-        tip(sexType+"==="+sexText);
+        tip(sexType + "===" + sexText);
     }
 }

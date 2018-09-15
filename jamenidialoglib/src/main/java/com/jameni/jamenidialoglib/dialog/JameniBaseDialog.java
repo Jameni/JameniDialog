@@ -24,6 +24,12 @@ public class JameniBaseDialog extends Dialog {
         this.context = context;
     }
 
+    public JameniBaseDialog(Context context, int themeResId) {
+        super(context, themeResId);
+        this.context = context;
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

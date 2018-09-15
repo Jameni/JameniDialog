@@ -28,7 +28,7 @@ public class SingleDialog extends JameniBaseDialog implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        View view = LayoutInflater.from(context).inflate(R.layout.view_single_dialog, null);
+        View view = LayoutInflater.from(context).inflate(R.layout.view_jameni_single_dialog, null);
         setContentView(view);
         tvContent = findViewById(R.id.message);
         tvTitle = findViewById(R.id.title);
@@ -60,21 +60,21 @@ public class SingleDialog extends JameniBaseDialog implements OnClickListener {
 
     public void setContentText(String str) {
         this.strContent = str;
-        if (tvContent != null) {
+        if (tvContent != null && !isNull(str)) {
             tvContent.setText(strContent);
         }
     }
 
     public void setBtnText(String str) {
         this.strBtn = str;
-        if (btn != null) {
+        if (btn != null && !isNull(str)) {
             btn.setText(strBtn);
         }
     }
 
     public void setStrTitle(String str) {
         this.strTitle = str;
-        if (tvTitle != null) {
+        if (tvTitle != null && !isNull(str)) {
             tvTitle.setText(str);
             tvTitle.setVisibility(View.VISIBLE);
         }

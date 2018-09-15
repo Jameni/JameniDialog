@@ -16,5 +16,6 @@
     <!--分割线-->
     <color name="jameni_dialog_line_gray">#E4E4E4</color>
 
-
+    <!--进度条 进度的颜色-->
+    <color name="jameni_dialog_progress_color">@color/jameni_dialog_txt_gray</color>
 </resources>

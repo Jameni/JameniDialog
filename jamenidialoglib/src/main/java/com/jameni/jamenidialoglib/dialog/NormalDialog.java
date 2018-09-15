@@ -32,7 +32,7 @@ public class NormalDialog extends JameniBaseDialog implements View.OnClickListen
          * 把tv_contentText宽度变为match_parent就不用动态设置dialog宽度
          * 如果tv_contentText宽度属性是wrap_content，如果文本不够长，则界面宽度会缩短，则要动态设置dialog宽度
          */
-        View view = LayoutInflater.from(context).inflate(R.layout.view_normal_dialog, null);
+        View view = LayoutInflater.from(context).inflate(R.layout.view_jameni_normal_dialog, null);
         setContentView(view);
         tvContent = findViewById(R.id.message);
         tvTitle = findViewById(R.id.title);
@@ -88,28 +88,28 @@ public class NormalDialog extends JameniBaseDialog implements View.OnClickListen
 
     public void setContentText(String str) {
         this.strContent = str;
-        if (!isNull(tvContent)) {
+        if (!isNull(tvContent) && !isNull(str)) {
             tvContent.setText(strContent);
         }
     }
 
     public void setLeftBtnText(String str) {
         this.strLeft = str;
-        if (!isNull(tvLeft)) {
+        if (!isNull(tvLeft) && !isNull(str)) {
             tvLeft.setText(strLeft);
         }
     }
 
     public void setRightBtnText(String str) {
         this.strRight = str;
-        if (tvRight != null) {
+        if (tvRight != null && !isNull(str)) {
             tvRight.setText(strRight);
         }
     }
 
     public void setStrTitle(String str) {
         this.strTitle = str;
-        if (tvTitle != null) {
+        if (tvTitle != null && !isNull(str)) {
             tvTitle.setText(str);
             tvTitle.setVisibility(View.VISIBLE);
         }
