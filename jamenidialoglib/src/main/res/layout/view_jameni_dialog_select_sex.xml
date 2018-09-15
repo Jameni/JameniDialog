@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/jameni_dialog_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvBoy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="男"
+            android:textColor="@color/jameni_dialog_txt_main" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/jameni_dialog_line_gray" />
+
+        <TextView
+            android:id="@+id/tvGirl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="女"
+            android:textColor="@color/jameni_dialog_txt_main" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/jameni_dialog_line_gray" />
+
+        <TextView
+            android:id="@+id/tvUnknow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="未知"
+            android:textColor="@color/jameni_dialog_txt_main" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvCancle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/jameni_dialog_bg"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="取  消"
+        android:textColor="@color/jameni_dialog_txt_gray" />
+
+</LinearLayout>

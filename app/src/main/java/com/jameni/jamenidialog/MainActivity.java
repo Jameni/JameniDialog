@@ -6,11 +6,15 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.jameni.jamenidialoglib.dialog.NormalDialog;
+import com.jameni.jamenidialoglib.dialog.SelectImageDialog;
+import com.jameni.jamenidialoglib.dialog.SelectSexDialog;
 import com.jameni.jamenidialoglib.dialog.SingleDialog;
 import com.jameni.jamenidialoglib.i.NormalDialogListener;
+import com.jameni.jamenidialoglib.i.SelectImageListener;
+import com.jameni.jamenidialoglib.i.SelectSexListener;
 import com.jameni.jamenidialoglib.i.SingleDialogListener;
 
-public class MainActivity extends AppCompatActivity implements NormalDialogListener, SingleDialogListener {
+public class MainActivity extends AppCompatActivity implements SelectSexListener, SelectImageListener, NormalDialogListener, SingleDialogListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +43,20 @@ public class MainActivity extends AppCompatActivity implements NormalDialogListe
 
     }
 
+
+    public void btn3(View view) {
+
+        SelectImageDialog dialog = new SelectImageDialog(this,this,false);
+        dialog.show();
+
+    }
+    public void btn4(View view) {
+
+        SelectSexDialog dialog = new SelectSexDialog(this,this,true);
+        dialog.show();
+
+    }
+
     @Override
     public void onLeftClick(Object obj, int actionTag) {
         tip("left");
@@ -56,5 +74,20 @@ public class MainActivity extends AppCompatActivity implements NormalDialogListe
     @Override
     public void onSingleOk(Object obj, int actionTag) {
         tip("onSingleOk");
+    }
+
+    @Override
+    public void selectPic() {
+        tip("selectPic");
+    }
+
+    @Override
+    public void takePic() {
+        tip("takePic");
+    }
+
+    @Override
+    public void selectSex(int sexType, String sexText) {
+        tip(sexType+"==="+sexText);
     }
 }
