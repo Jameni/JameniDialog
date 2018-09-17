@@ -18,23 +18,21 @@ import com.jameni.jamenidialoglib.i.SelectImageListener;
  * 选图对话框
  */
 
-public class SelectImageDialog extends Dialog implements OnClickListener {
+public class SelectImageDialog extends JameniBaseDialog implements OnClickListener {
 
     private Activity activity;
     private TextView tvAlbum, tvCammera, tvCancle;
     private SelectImageListener listener;
-    private boolean isCenter;//是否在屏幕中间展示
 
     public SelectImageDialog(Activity activity, SelectImageListener listener, boolean isCenter) {
-        super(activity, isCenter ? R.style.JameniDialogStyle : R.style.jameni_dialog_from_bottom);
+        super(activity, isCenter);
         this.activity = activity;
         this.listener = listener;
-        this.isCenter = isCenter;
     }
 
 
     public SelectImageDialog(Activity activity, SelectImageListener listener) {
-        super(activity, R.style.jameni_dialog_from_bottom);
+        super(activity, false);
         this.activity = activity;
         this.listener = listener;
     }

@@ -19,23 +19,21 @@ import com.jameni.jamenidialoglib.i.SelectSexListener;
  * 选图对话框
  */
 
-public class SelectSexDialog extends Dialog implements OnClickListener {
+public class SelectSexDialog extends JameniBaseDialog implements OnClickListener {
 
     private Activity activity;
     private TextView tvBoy, tvGirl, tvUnknow, tvCancle;
     private SelectSexListener listener;
-    private boolean isCenter;//是否在屏幕中间展示
     private boolean isShowUnknow = true;//是否显示未知 按钮
 
     public SelectSexDialog(Activity activity, SelectSexListener listener, boolean isCenter) {
-        super(activity, isCenter ? R.style.JameniDialogStyle : R.style.jameni_dialog_from_bottom);
+        super(activity, isCenter);
         this.activity = activity;
         this.listener = listener;
-        this.isCenter = isCenter;
     }
 
     public SelectSexDialog(Activity activity, SelectSexListener listener) {
-        super(activity, R.style.jameni_dialog_from_bottom);
+        super(activity, false);
         this.activity = activity;
         this.listener = listener;
     }
