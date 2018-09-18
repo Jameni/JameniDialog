@@ -76,12 +76,13 @@ public class MainActivity extends AppCompatActivity implements SelectSexListener
     public void btn6(View view) {
 
         List<ItemModel> datalist = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 30; i++) {
             datalist.add(new ItemModel(i + ""));
         }
 
 
-        ListDialog dialog = new ListDialog(this, datalist,null,false);
+        ListDialog dialog = new ListDialog(this, datalist, null, false);
+        dialog.setHeightScale(0.8f);
         dialog.show();
 
     }

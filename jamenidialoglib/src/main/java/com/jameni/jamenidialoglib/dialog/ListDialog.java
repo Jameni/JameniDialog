@@ -18,6 +18,7 @@ import com.jameni.jamenidialoglib.adapter.SelectionAdapter;
 import com.jameni.jamenidialoglib.i.DialogItemClickListener;
 import com.jameni.jamenidialoglib.i.SelectSexListener;
 import com.jameni.jamenidialoglib.i.SelectionItemModel;
+import com.jameni.jamenidialoglib.view.MaxListview;
 
 import java.util.List;
 
@@ -27,10 +28,12 @@ import java.util.List;
 
 public class ListDialog extends JameniBaseDialog implements AdapterView.OnItemClickListener {
 
-    private ListView dialogList;
+    private MaxListview dialogList;
+    //    private ListView dialogList;
     private DialogItemClickListener listener;
     private SelectionAdapter adapter;
     private List datalist;
+    private float heightScale; //跟屏幕的百分比  值是0~1
 
     public ListDialog(Context context, List list) {
         super(context, true);
@@ -57,10 +60,17 @@ public class ListDialog extends JameniBaseDialog implements AdapterView.OnItemCl
         View view = LayoutInflater.from(context).inflate(R.layout.view_jameni_dialog_list, null);
         setContentView(view);
         dialogList = view.findViewById(R.id.dialogList);
-        adapter = new SelectionAdapter(context);
+        if (adapter == null) {
+            //如果adapter 没有从外面传一个进来，就用自定义的
+            adapter = new SelectionAdapter(context);
+            adapter.update(datalist);
+        }
         dialogList.setAdapter(adapter);
-        adapter.update(datalist);
         dialogList.setOnItemClickListener(this);
+
+        if (1 > heightScale && heightScale > 0) {
+            dialogList.setHeightScale(heightScale);
+        }
 
         if (isCenter) {
 
@@ -86,5 +96,14 @@ public class ListDialog extends JameniBaseDialog implements AdapterView.OnItemCl
 
         dismiss();
 
+    }
+
+    public void setAdapter(SelectionAdapter adapter) {
+        this.adapter = adapter;
+    }
+
+    //设置高度跟屏幕的百分比  值是0~1
+    public void setHeightScale(float heightScale) {
+        this.heightScale = heightScale;
     }
 }

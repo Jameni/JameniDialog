@@ -11,13 +11,23 @@
         android:orientation="vertical"
         android:padding="5dp">
 
-        <ListView
+
+        <com.jameni.jamenidialoglib.view.MaxListview
             android:id="@+id/dialogList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:divider="@color/jameni_dialog_line_gray"
             android:dividerHeight="1px"
             android:scrollbars="none" />
+
+        <!--<ListView-->
+            <!--android:id="@+id/dialogList"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:divider="@color/jameni_dialog_line_gray"-->
+            <!--android:dividerHeight="1px"-->
+            <!--android:scrollbars="none" />-->
+
 
 
     </LinearLayout>
