@@ -32,7 +32,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:height="120dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:minHeight="100dp"
             android:gravity="center"
             android:text="提示消息"
             android:textColor="@color/jameni_dialog_txt_main" />

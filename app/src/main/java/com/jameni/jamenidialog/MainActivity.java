@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements SelectSexListener
     public void btn1(View view) {
 
         SingleDialog dialog = new SingleDialog(this);
-        dialog.setContentText("abx");
+        dialog.setContentText("abxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabx");
         dialog.setBtnText("ddd");
         dialog.setSingleListener(this);
         dialog.show();
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements SelectSexListener
     public void btn2(View view) {
 
         NormalDialog dialog = new NormalDialog(this);
-        dialog.setContentText("abx");
+        dialog.setContentText("abxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabx");
         dialog.setLeftBtnText("leftdd");
         dialog.setRightBtnText("right");
         dialog.setNormalListener(this);
