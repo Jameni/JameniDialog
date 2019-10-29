@@ -148,5 +148,19 @@ public class NormalDialog extends JameniBaseDialog implements View.OnClickListen
     }
 
 
+    public TextView getTvContent() {
+        return tvContent;
+    }
 
+    public TextView getTvLeft() {
+        return tvLeft;
+    }
+
+    public TextView getTvRight() {
+        return tvRight;
+    }
+
+    public TextView getTvTitle() {
+        return tvTitle;
+    }
 }

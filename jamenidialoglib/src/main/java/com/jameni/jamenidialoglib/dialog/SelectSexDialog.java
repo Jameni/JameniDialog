@@ -104,4 +104,20 @@ public class SelectSexDialog extends JameniBaseDialog implements OnClickListener
     public void setListener(SelectSexListener listener) {
         this.listener = listener;
     }
+
+    public TextView getTvBoy() {
+        return tvBoy;
+    }
+
+    public TextView getTvGirl() {
+        return tvGirl;
+    }
+
+    public TextView getTvUnknow() {
+        return tvUnknow;
+    }
+
+    public TextView getTvCancle() {
+        return tvCancle;
+    }
 }

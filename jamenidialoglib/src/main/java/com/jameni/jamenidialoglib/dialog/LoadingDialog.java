@@ -22,7 +22,7 @@ public class LoadingDialog extends JameniBaseDialog implements OnClickListener {
         super(context, R.style.JameniLoadingDialogStyle);
     }
 
-    private TextView tvMsg, btn, tvTitle;
+    private TextView tvMsg;
     private ProgressBar pBar;
     private String strMsg = "";
     private Drawable pbColor;
@@ -86,5 +86,13 @@ public class LoadingDialog extends JameniBaseDialog implements OnClickListener {
         }
     }
 
+
+    public TextView getTvMsg() {
+        return tvMsg;
+    }
+
+    public ProgressBar getpBar() {
+        return pBar;
+    }
 }
 

@@ -69,4 +69,7 @@ public class JameniBaseDialog extends Dialog {
         return obj == null;
     }
 
+    public Object getObj() {
+        return obj;
+    }
 }

@@ -79,5 +79,17 @@ public class SingleDialog extends JameniBaseDialog implements OnClickListener {
             tvTitle.setVisibility(View.VISIBLE);
         }
     }
+
+    public TextView getTvContent() {
+        return tvContent;
+    }
+
+    public TextView getBtn() {
+        return btn;
+    }
+
+    public TextView getTvTitle() {
+        return tvTitle;
+    }
 }
 

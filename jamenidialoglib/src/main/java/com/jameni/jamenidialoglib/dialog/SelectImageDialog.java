@@ -84,4 +84,16 @@ public class SelectImageDialog extends JameniBaseDialog implements OnClickListen
     public void setListener(SelectImageListener listener) {
         this.listener = listener;
     }
+
+    public TextView getTvAlbum() {
+        return tvAlbum;
+    }
+
+    public TextView getTvCammera() {
+        return tvCammera;
+    }
+
+    public TextView getTvCancle() {
+        return tvCancle;
+    }
 }
