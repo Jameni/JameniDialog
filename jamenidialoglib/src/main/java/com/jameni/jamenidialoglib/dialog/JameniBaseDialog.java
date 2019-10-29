@@ -19,7 +19,6 @@ public class JameniBaseDialog extends Dialog {
     protected Object obj;//用来存数据
     protected boolean isCenter;//是否在屏幕中间展示
 
-
     public JameniBaseDialog(Context context) {
         super(context, R.style.JameniDialogStyle);
         this.isCenter = true;
