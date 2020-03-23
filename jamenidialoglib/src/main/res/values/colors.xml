@@ -18,4 +18,7 @@
 
     <!--进度条 进度的颜色-->
     <color name="jameni_dialog_progress_color">@color/jameni_dialog_txt_gray</color>
+
+    <color name="jameni_dialog_txt_blue">#52ade6</color>
+
 </resources>

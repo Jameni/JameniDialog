@@ -1,17 +1,19 @@
 package com.jameni.jamenidialog;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ListView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.jameni.jamenidialoglib.JameniDialog;
 import com.jameni.jamenidialoglib.dialog.ListDialog;
 import com.jameni.jamenidialoglib.dialog.LoadingDialog;
 import com.jameni.jamenidialoglib.dialog.NormalDialog;
 import com.jameni.jamenidialoglib.dialog.SelectImageDialog;
 import com.jameni.jamenidialoglib.dialog.SelectSexDialog;
 import com.jameni.jamenidialoglib.dialog.SingleDialog;
+import com.jameni.jamenidialoglib.i.DialogItemClickListener;
 import com.jameni.jamenidialoglib.i.NormalDialogListener;
 import com.jameni.jamenidialoglib.i.SelectImageListener;
 import com.jameni.jamenidialoglib.i.SelectSexListener;
@@ -20,7 +22,7 @@ import com.jameni.jamenidialoglib.i.SingleDialogListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements SelectSexListener, SelectImageListener, NormalDialogListener, SingleDialogListener {
+public class MainActivity extends AppCompatActivity implements SelectSexListener, SelectImageListener, NormalDialogListener, SingleDialogListener, DialogItemClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,46 +32,82 @@ public class MainActivity extends AppCompatActivity implements SelectSexListener
 
     public void btn1(View view) {
 
-        SingleDialog dialog = new SingleDialog(this);
-        dialog.setContentText("abxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabx");
-        dialog.setBtnText("ddd");
-        dialog.setSingleListener(this);
-        dialog.show();
+//        SingleDialog dialog = new SingleDialog(this);
+//        dialog.setContentText("abxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabx");
+//        dialog.setBtnText("ddd");
+//        dialog.setSingleListener(this);
+//        dialog.show();
+
+        new JameniDialog.Builder(this)
+                .setSingleDialogListener(this)
+                .setMsg("提示信息1")
+                .setTitle("这是标题1")
+                .setSingleBtnText("确定1")
+                .showSingleDialog();
+
 
     }
 
     public void btn2(View view) {
 
-        NormalDialog dialog = new NormalDialog(this);
-        dialog.setContentText("abxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabx");
-        dialog.setLeftBtnText("leftdd");
-        dialog.setRightBtnText("right");
-        dialog.setNormalListener(this);
-        dialog.show();
+//        NormalDialog dialog = new NormalDialog(this);
+//        dialog.setContentText("abxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabxabx");
+//        dialog.setLeftBtnText("leftdd");
+//        dialog.setRightBtnText("right");
+//        dialog.setNormalListener(this);
+//        dialog.show();
+
+        new JameniDialog.Builder(this)
+                .setNormalDialogListener(this)
+                .setMsg("提示信息2")
+//                .setTitle("这是标题2")
+                .setLeftText("left2")
+                .setRightText("right2")
+                .showNormalDialog();
+
 
     }
 
 
     public void btn3(View view) {
 
-        SelectImageDialog dialog = new SelectImageDialog(this, this, false);
-        dialog.show();
+//        SelectImageDialog dialog = new SelectImageDialog(this, this, false);
+//        dialog.show();
+
+        new JameniDialog.Builder(this)
+                .setActivity(this)
+                .setClickOutSizeCancle(true)
+                .setSelectImageListener(this)
+                .setDialogCenter(false)
+                .showSelectImageDialog();
 
     }
 
     public void btn4(View view) {
 
-        SelectSexDialog dialog = new SelectSexDialog(this, this, true);
-        dialog.show();
+//        SelectSexDialog dialog = new SelectSexDialog(this, this, true);
+//        dialog.show();
 
+        new JameniDialog.Builder(this)
+                .setActivity(this)
+                .setSelectSexListener(this)
+                .setClickOutSizeCancle(true)
+                .setDialogCenter(false)
+                .showSexDialog();
     }
 
 
     public void btn5(View view) {
 
-        LoadingDialog dialog = new LoadingDialog(this);
-        dialog.setCanceledOnTouchOutside(true);
-        dialog.show();
+//        LoadingDialog dialog = new LoadingDialog(this);
+//        dialog.setCanceledOnTouchOutside(true);
+//        dialog.show();
+
+        new JameniDialog.Builder(this)
+                .setLoadingText("顶顶顶顶顶顶顶顶顶顶大大大")
+                .setClickOutSizeCancle(true)
+                .showLoadingDialog();
+
 
     }
 
@@ -81,9 +119,16 @@ public class MainActivity extends AppCompatActivity implements SelectSexListener
         }
 
 
-        ListDialog dialog = new ListDialog(this, datalist, null, false);
-        dialog.setHeightScale(0.8f);
-        dialog.show();
+//        ListDialog dialog = new ListDialog(this, datalist, null, false);
+//        dialog.setHeightScale(0.8f);
+//        dialog.show();
+        new JameniDialog.Builder(this)
+                .setActivity(this)
+                .setList(datalist)
+                .setDialogItemClickListener(this)
+                .setClickOutSizeCancle(true)
+                .setDialogCenter(false)
+                .showList();
 
     }
 
@@ -120,5 +165,12 @@ public class MainActivity extends AppCompatActivity implements SelectSexListener
     @Override
     public void selectSex(int sexType, String sexText) {
         tip(sexType + "===" + sexText);
+    }
+
+    @Override
+    public void dialogItemClick(Object obj, int position, int flag) {
+
+        ItemModel data = (ItemModel) obj;
+        tip(data.toString());
     }
 }

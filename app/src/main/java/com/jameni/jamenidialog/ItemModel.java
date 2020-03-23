@@ -63,4 +63,10 @@ public class ItemModel implements SelectionItemModel {
         return backgroundColorResId;
     }
 
+    @Override
+    public String toString() {
+        return "ItemModel{" +
+                "text='" + text + '\'' +
+                '}';
+    }
 }

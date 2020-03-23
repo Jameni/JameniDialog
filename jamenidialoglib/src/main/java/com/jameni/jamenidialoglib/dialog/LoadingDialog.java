@@ -46,6 +46,7 @@ public class LoadingDialog extends JameniBaseDialog implements OnClickListener {
             pBar.setIndeterminateDrawable(pbColor);
         }
 
+
     }
 
     @Override
@@ -79,7 +80,7 @@ public class LoadingDialog extends JameniBaseDialog implements OnClickListener {
 
     }
 
-    public void setBtnText(Drawable progressColor) {
+    public void setProgressColor(Drawable progressColor) {
         this.pbColor = progressColor;
         if (pBar != null && progressColor != null) {
             pBar.setIndeterminateDrawable(progressColor);
