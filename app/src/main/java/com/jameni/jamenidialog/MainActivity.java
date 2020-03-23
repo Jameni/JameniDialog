@@ -7,12 +7,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.jameni.jamenidialoglib.JameniDialog;
-import com.jameni.jamenidialoglib.dialog.ListDialog;
-import com.jameni.jamenidialoglib.dialog.LoadingDialog;
-import com.jameni.jamenidialoglib.dialog.NormalDialog;
-import com.jameni.jamenidialoglib.dialog.SelectImageDialog;
-import com.jameni.jamenidialoglib.dialog.SelectSexDialog;
-import com.jameni.jamenidialoglib.dialog.SingleDialog;
 import com.jameni.jamenidialoglib.i.DialogItemClickListener;
 import com.jameni.jamenidialoglib.i.NormalDialogListener;
 import com.jameni.jamenidialoglib.i.SelectImageListener;
@@ -117,8 +111,6 @@ public class MainActivity extends AppCompatActivity implements SelectSexListener
         for (int i = 0; i < 30; i++) {
             datalist.add(new ItemModel(i + ""));
         }
-
-
 //        ListDialog dialog = new ListDialog(this, datalist, null, false);
 //        dialog.setHeightScale(0.8f);
 //        dialog.show();

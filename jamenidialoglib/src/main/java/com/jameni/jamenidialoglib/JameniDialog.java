@@ -17,7 +17,6 @@ import com.jameni.jamenidialoglib.i.SelectImageListener;
 import com.jameni.jamenidialoglib.i.SelectSexListener;
 import com.jameni.jamenidialoglib.i.SingleDialogListener;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class JameniDialog {
