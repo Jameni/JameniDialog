@@ -11,7 +11,6 @@
          new JameniDialog.Builder(this)
                 .setNormalDialogListener(this)
                 .setMsg("提示信息2")
-//                .setTitle("这是标题2")
                 .setLeftText("left2")
                 .setRightText("right2")
                 .showNormalDialog();
