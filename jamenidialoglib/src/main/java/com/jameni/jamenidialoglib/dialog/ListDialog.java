@@ -27,7 +27,6 @@ import java.util.List;
  */
 
 public class ListDialog extends JameniBaseDialog implements AdapterView.OnItemClickListener {
-
     private MaxListview dialogList;
     //    private ListView dialogList;
     private DialogItemClickListener listener;

@@ -21,17 +21,9 @@ import java.util.List;
 
 public class JameniDialog {
 
-//    public JameniDialog(Builder builder) {
-//    }
-
     private JameniDialog() {
 
     }
-
-//    private JameniDialog(Builder builder) {
-//
-//    }
-
 
     public static class Builder {
 
@@ -251,7 +243,6 @@ public class JameniDialog {
             dialog.show();
             dialog.setMsg(this.loadingText);
             dialog.setProgressColor(this.progressColor);
-
             return dialog;
 
         }

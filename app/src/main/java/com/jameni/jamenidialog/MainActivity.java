@@ -103,6 +103,7 @@ public class MainActivity extends AppCompatActivity implements SelectSexListener
                 .showLoadingDialog();
 
 
+
     }
 
     public void btn6(View view) {
@@ -123,7 +124,14 @@ public class MainActivity extends AppCompatActivity implements SelectSexListener
                 .showList();
 
     }
+    public void btn7(View view) {
 
+        DefindDialog dialog = new DefindDialog(this);
+        dialog.show();
+
+
+
+    }
 
     @Override
     public void onLeftClick(Object obj, int actionTag) {

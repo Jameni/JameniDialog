@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.jameni.jamenidialoglib.R;
@@ -67,7 +68,6 @@ public class NormalDialog extends JameniBaseDialog implements View.OnClickListen
 
         tvLeft.setOnClickListener(this);
         tvRight.setOnClickListener(this);
-
     }
 
     @Override

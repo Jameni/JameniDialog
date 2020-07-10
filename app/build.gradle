@@ -23,6 +23,7 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
     implementation project(':jamenidialoglib')
     //    implementation 'com.github.Jameni:JameniDialog:v1.0.0'
 }
